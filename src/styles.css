@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kablammo&family=Lora&family=Open+Sans:ital@1&family=Pacifico&family=Poppins:wght@200&family=Raleway:wght@600&family=Roboto+Condensed:wght@300&family=Roboto+Mono:ital,wght@0,300;1,200&family=Roboto:ital,wght@0,300;1,100&family=Ubuntu:wght@300&display=swap');
+
+
+h1{
+    font-family: 'Roboto Mono', monospace;
+}
