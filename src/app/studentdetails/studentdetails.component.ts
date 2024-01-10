@@ -15,8 +15,17 @@ export class StudentdetailsComponent {
     address: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ]*')]],
     email: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}')]],
     phone: ['', [Validators.required, Validators.pattern('[0-9]*')]],
-    district: ['']
-  })
+    district: [''],
+
+    English: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    Maths: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    Science: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    Social: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    Hindi: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    // Additional fields for total and average
+    totalMarks: [''],
+    averageMarks: ['']
+  });
 
   // control passes to html
   register(){
@@ -41,5 +50,9 @@ export class StudentdetailsComponent {
    }
 
 }
+
+
+
+
 
 }

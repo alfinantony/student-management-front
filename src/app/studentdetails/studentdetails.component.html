@@ -1,86 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 
 </head>
+
 <body>
-<div>
-    <div class="container-fluid bg-dark text-light w-50">
-        <h2 class="text-center display-6 mt-5 p-1">Student Registration Form</h2>
-    </div> 
-    <div class="form-row container w-50">
-        <form [formGroup]="studentdetailsForm" action="" class="border border-2 mt-5 p-4 rounded">
-            <div class="form-group">
-                <div class="row">
-                    <label for="" class="col-sm-2 col-form-label">Name</label>
-                    <div class="col"><input type="text" name="name" formControlName="name" class="form-control" name="Student name" placeholder="Student name" required="required"></div>
-                    <!-- <div class="col"><input type="text" class="form-control" name="last name" placeholder="last name" required="required"></div> -->
+    <div>
+        <div class="container-fluid bg-dark text-light w-50">
+            <h2 class="text-center display-6 mt-5 p-1">Student Registration Form</h2>
+        </div>
+        <div class="form-row container w-50">
+            <form [formGroup]="studentdetailsForm" action="" class="border border-2 mt-5 p-4 rounded">
+                <div class="form-group">
+                    <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col"><input type="text" name="name" formControlName="name" class="form-control"
+                                name="Student name" placeholder="Student name" required="required"></div>
+                        <!-- <div class="col"><input type="text" class="form-control" name="last name" placeholder="last name" required="required"></div> -->
 
+                    </div>
                 </div>
-            </div>
 
-            <div *ngIf="this.studentdetailsForm.get('name')?.errors && this.studentdetailsForm.get('name')?.touched" class="text-danger">Invalid name </div>
+                <div *ngIf="this.studentdetailsForm.get('name')?.errors && this.studentdetailsForm.get('name')?.touched"
+                    class="text-danger">Invalid name </div>
 
- <br>
+                <br>
                 <div class="form-group row">
-                <label for="" class="col-sm-2 col-form-label">Address</label>
-                <div class="col-sm-10">
-                    <input type="text" name="address" formControlName="address" class="form-control" placeholder="">
-                  </div>
-              </div>
-<br>              
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" name="email" formControlName="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <label for="" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="address" formControlName="address" class="form-control" placeholder="">
+                    </div>
                 </div>
-              </div>
+                <br>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" name="email" formControlName="email" class="form-control" id="inputEmail3"
+                            placeholder="Email">
+                    </div>
+                </div>
 
-              <div *ngIf="this.studentdetailsForm.get('email')?.errors && this.studentdetailsForm.get('email')?.touched" class="text-danger">Invalid email </div>
+                <div *ngIf="this.studentdetailsForm.get('email')?.errors && this.studentdetailsForm.get('email')?.touched"
+                    class="text-danger">Invalid email </div>
 
-<br>
-              <div class="row">
-                <label for="" class="col-sm-2 col-form-label">Phone</label>
-                <!-- <div class="col"><input type="text" class="form-control"  placeholder="Area code" required="required"></div> -->
-                <div class="col"><input type="text" name="phone" formControlName="phone" class="form-control" placeholder="phone number" required="required"></div>
-             </div>
+                <br>
+                <div class="row">
+                    <label for="" class="col-sm-2 col-form-label">Phone</label>
+                    <!-- <div class="col"><input type="text" class="form-control"  placeholder="Area code" required="required"></div> -->
+                    <div class="col"><input type="text" name="phone" formControlName="phone" class="form-control"
+                            placeholder="phone number" required="required"></div>
+                </div>
 
-             <div *ngIf="this.studentdetailsForm.get('phone')?.errors && this.studentdetailsForm.get('phone')?.touched" class="text-danger">Invalid phone number </div>
+                <div *ngIf="this.studentdetailsForm.get('phone')?.errors && this.studentdetailsForm.get('phone')?.touched"
+                    class="text-danger">Invalid phone number </div>
 
-<br>
-      
- <!-- Add District Label and Input -->
-<div class="form-group row">
-    <label for="district" class="col-sm-2 col-form-label">District</label>
-    <div class="col-sm-10">
-        <select name="district" formControlName="district" class="form-control" name="district" id="district" required="required">
-            <option value="" disabled selected>Select District</option>
-            <option value="Ariyalur">Ariyalur</option>
-            <option value="Chengalpattu">Chengalpattu</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Coimbatore">Coimbatore</option>
+                <br>
 
-         
-        </select>
+                <!-- Add District Label and Input -->
+                <div class="form-group row">
+                    <label for="district" class="col-sm-2 col-form-label">District</label>
+                    <div class="col-sm-10">
+                        <select name="district" formControlName="district" class="form-control" name="district"
+                            id="district" required="required">
+                            <option value="" disabled selected>Select District</option>
+                            <option value="Ariyalur">Ariyalur</option>
+                            <option value="Chengalpattu">Chengalpattu</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+
+
+                        </select>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- Add input fields for marks of 1 subjects -->
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">English</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="English" formControlName="English" class="form-control" placeholder="">
+                    </div>
+                </div>
+
+                <!-- Add input fields for marks of 2 subjects -->
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Maths</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="Maths" formControlName="Maths" class="form-control" placeholder="">
+                    </div>
+                </div>
+
+                <!-- Add input fields for marks of 3 subjects -->
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Science</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="Science" formControlName="Science" class="form-control" placeholder="">
+                    </div>
+                </div>
+
+                <!-- Add input fields for marks of 4 subjects -->
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Social</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="Social" formControlName="Social" class="form-control" placeholder="">
+                    </div>
+                </div>
+
+                <!-- Add input fields for marks of 5 subjects -->
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Hindi</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="Hindi" formControlName="Hindi" class="form-control" placeholder="">
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- Display total and average -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Total Marks</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="totalMarks" formControlName="totalMarks" class="form-control" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Average Marks</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="averageMarks" formControlName="averageMarks" class="form-control"
+                            readonly>
+                    </div>
+                </div>
+
+
+                <br>
+                <div class=" text-center" routerLink="/">
+                    <button class="btn btn-primary " type="submit" (click)="register()"> Register</button>
+                </div>
+
+
+            </form>
+        </div>
+
+
+
     </div>
-</div>
-<br>
-<div class=" text-center" routerLink="/">
-    <button class="btn btn-primary " type="submit" (click)="register()"> Register</button>
-</div>
-
-                
-        </form>      
-    </div>
-   
-        
-    
-</div>    
 </body>
+
 </html>
