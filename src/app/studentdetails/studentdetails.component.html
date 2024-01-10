@@ -85,11 +85,11 @@
 
                 <br>
 
-                <!-- Add input fields for marks of 1 subjects -->
-                <div class="form-group row">
+               <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">English</label>
                     <div class="col-sm-5">
-                        <input type="text" name="English" formControlName="English" class="form-control" placeholder="">
+                        <input type="text" name="English" formControlName="English" class="form-control" placeholder=""
+                            (input)="calculateTotalAndAverage()">
                     </div>
                 </div>
 
@@ -97,7 +97,8 @@
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Maths</label>
                     <div class="col-sm-5">
-                        <input type="text" name="Maths" formControlName="Maths" class="form-control" placeholder="">
+                        <input type="text" name="Maths" formControlName="Maths" class="form-control" placeholder=""
+                            (input)="calculateTotalAndAverage()">
                     </div>
                 </div>
 
@@ -105,7 +106,8 @@
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Science</label>
                     <div class="col-sm-5">
-                        <input type="text" name="Science" formControlName="Science" class="form-control" placeholder="">
+                        <input type="text" name="Science" formControlName="Science" class="form-control" placeholder=""
+                            (input)="calculateTotalAndAverage()">
                     </div>
                 </div>
 
@@ -113,7 +115,8 @@
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Social</label>
                     <div class="col-sm-5">
-                        <input type="text" name="Social" formControlName="Social" class="form-control" placeholder="">
+                        <input type="text" name="Social" formControlName="Social" class="form-control" placeholder=""
+                            (input)="calculateTotalAndAverage()">
                     </div>
                 </div>
 
@@ -121,28 +124,26 @@
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Hindi</label>
                     <div class="col-sm-5">
-                        <input type="text" name="Hindi" formControlName="Hindi" class="form-control" placeholder="">
+                        <input type="text" name="Hindi" formControlName="Hindi" class="form-control" placeholder=""
+                            (input)="calculateTotalAndAverage()">
                     </div>
                 </div>
-
-                <br>
 
                 <!-- Display total and average -->
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Total Marks</label>
                     <div class="col-sm-2">
-                        <input type="text" name="totalMarks" formControlName="totalMarks" class="form-control" readonly>
+                      <input type="text" name="totalMarks" formControlName="totalMarks" class="form-control" readonly>
                     </div>
-                </div>
-
-                <div class="form-group row">
+                  </div>
+                  
+                  <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Average Marks</label>
                     <div class="col-sm-2">
-                        <input type="text" name="averageMarks" formControlName="averageMarks" class="form-control"
-                            readonly>
+                      <input type="text" name="averageMarks" formControlName="averageMarks" class="form-control" readonly>
                     </div>
-                </div>
-
+                  </div>
+                  
 
                 <br>
                 <div class=" text-center" routerLink="/">
