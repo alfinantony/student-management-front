@@ -86,17 +86,17 @@ calculateTotalAndAverage() {
   const social = this.studentdetailsForm.value.social || 0;
   const hindi = this.studentdetailsForm.value.hindi || 0;
 
-  // Ensure the values are numbers before calculating
-  const marksArray = [english, maths, science, social, hindi].map(Number);
+   // Ensure the values are numbers before calculating
+   const marksArray = [english, maths, science, social, hindi].map(Number);
 
-  // Calculate total marks
-  const totalMarks = marksArray.reduce((total, mark) => total + mark, 0);
-  this.studentdetailsForm.get('totalMarks')?.setValue(totalMarks);
+   // Calculate total marks
+   const totalMarks = marksArray.reduce((total, mark) => total + mark, 0);
+   this.studentdetailsForm.get('totalMarks')?.setValue(totalMarks);
 
-  // Calculate average marks
-  const averageMarks = totalMarks / marksArray.length || 0; // Handle division by zero
-  this.studentdetailsForm.get('averageMarks')?.setValue(averageMarks);
-}
+   // Calculate average marks
+   const averageMarks = totalMarks / marksArray.length || 0; // Handle division by zero
+   this.studentdetailsForm.get('averageMarks')?.setValue(averageMarks);
+ }
 
 
 // Function to get a form control for easier validation checks in the template
